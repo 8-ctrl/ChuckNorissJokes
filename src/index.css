@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  
   background: linear-gradient(
     135.8deg,
     cyan,
@@ -42,11 +43,15 @@ body {
 }
 
 #root {
+  min-width: 100vw;
+  min-height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
+
+}
 .heading {
   margin-bottom: 30px;
   color: #0564bd;
@@ -54,11 +59,10 @@ body {
 }
 
 .App {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
   padding: 20px;
-  min-height: 50vh;
-
+  max-width: 600px;
+  
   background: white;
   /* border-radius: 15px; */
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -87,15 +91,13 @@ body {
   grid-gap: 8px 8px;
 }
 
-.text-container {
+p.joke {
   line-height: 150%;
   margin: 20px 0px;
   font-size: 2.2rem;
   font-weight: 600;
-
   color: #333;
 
-  width: 100%;
 }
 
 .btn {
@@ -108,9 +110,6 @@ body {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   border: none;
-}
-.get-new-joke-btn {
-  padding-bottom: 0px;
 }
 
 .btn:focus {
@@ -132,6 +131,6 @@ body {
   .categories-wrapper {
     width: 100%;
     height: auto;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
   }
 }

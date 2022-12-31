@@ -8,7 +8,7 @@ const Button = () => {
   function handleCategory(e) {
     if (selectedCategory !== e.target.value) {
       setSelectedCategory(e.target.value);
-      console.log(e.target.value);
+
       fetchjokes(selectedCategory);
     }
   }
@@ -37,12 +37,12 @@ const Button = () => {
         <span className="category"> {selectedCategory}</span>
       </div>
 
-      <div className="text-container">
-        {/* <p className="joke"> */}
-        {jokes ? jokes : "The Jokes will be displayed here"}
-        {/* </p> */}
+      <div>
+        <p className="joke">
+          {jokes ? jokes : "The Jokes will be displayed here"}
+        </p>
       </div>
-      <button className="btn btn-cyan get-new-joke-btn" onClick={newJoke}>
+      <button className="btn btn-cyan" onClick={newJoke}>
         Get New Joke 😂
       </button>
     </div>
